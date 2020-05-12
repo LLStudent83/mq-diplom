@@ -44,6 +44,7 @@ body {
   width: 130px;
   margin: 0 auto;
   position: relative;
+  z-index: 1;
 }
 
 .header_title {
@@ -69,6 +70,7 @@ padding: 25px 0 0 45px;
   max-width: 280px;
   min-width: 100px;
   margin: 0 auto;
+  z-index: 1;
 }
 
 button {
@@ -115,25 +117,103 @@ margin-left: 10px;
   fill: #ffffff;
 }
 
+.main_article_athlets_img {
+padding-top: 25px;
+}
+
+.main_title {
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 50px;
+  color: #e7e7e7;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 250px;
+  margin-left: auto;
+  margin-right: auto;
+
+  }
+
+.main_article_athlets_img_text span {
+  display: block;
+
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 15px;
+  color: #000000;
+}
+
+.main_article_athlets_img_text {
+  background-color: #fafafa;
+  height: 210px;
+}
+
 .footer {
-  padding: 110px 20px 10px;
+  padding: 100px 20px 10px;
   background-image: url("../images/game_767.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
+  position: relative;
 }
+
+.footer::after {
+  content: "";
+  background-color: #071441;
+  opacity: 0.9;
+  background-position: center center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+}
+
 .footer_svg {
   display: block;
   width: 55px;
+  height: 55px;
   fill: #ffffff;
-  position: relative;
-  margin: 0 auto;
-  
+  position: absolute;
+  z-index: 2;
+  top: 0px; bottom: 0; left: 0; right: 0;
+  margin: auto;
 }
 
-/*.footer_svg::after {
-  content: "";
+.footer_svg_substrate {
   width: 70px;
   height: 70px;
-  background-color: #53399f;
-}*/
+  border-radius: 15px;
+  background-color: #553ba2;
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.footer_for_loading a, .footer_for_loading {
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 32px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  margin-top: 60px;
+}
+
+
+
+.footer_tagline {
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 14px;
+  color: #9b8ec1;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.footer_button {
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
