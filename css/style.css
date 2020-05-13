@@ -118,32 +118,54 @@ margin-left: 10px;
 }
 
 .main_article_athlets_img {
-padding-top: 25px;
+  padding-top: 25px;
+  position: relative;
+}
+
+.main_article_athlets_img::before {
+  content: "";
+  background-image: url("../images/footballer_192.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 180px;
+  height: 100%;
+  top: 100px;
+  margin: auto;
+  left: 0; right: 0;
+  z-index: 1;
+
 }
 
 .main_title {
-  font-family: OpenSans-Bold, sans-serif;
-  font-size: 50px;
-  color: #e7e7e7;
-  text-transform: uppercase;
+  max-width: 250px;
   margin-top: 0;
   margin-bottom: 250px;
   margin-left: auto;
   margin-right: auto;
-
-  }
-
-.main_article_athlets_img_text span {
-  display: block;
-
-  font-family: OpenSans-Regular, sans-serif;
-  font-size: 15px;
-  color: #000000;
+  padding-left: 20px;
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 50px;
+  color: #e7e7e7;
+  text-transform: uppercase;
 }
 
 .main_article_athlets_img_text {
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 15px;
+  color: #000000;
+  padding: 120px 20px 50px 20px;
+  margin-top: 120px;
   background-color: #fafafa;
-  height: 210px;
+}
+
+.main_article_athlets_img_text span {
+  display: block;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.main_article_athlets_blabla_02 {
+  background-color: #f5f4f9;
 }
 
 .footer {
