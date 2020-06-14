@@ -143,6 +143,7 @@ button {
   .footer_button_app, .footer_button_google {
     width: 300px;
     height: 70px;
+    padding-top: 15px;
   }
   button {
     border-radius: 35px;
@@ -200,6 +201,7 @@ button {
   .footer_button_app, .footer_button_google {
     width: 315px;
     height: 75px;
+    padding-top: 15px;
   }
 
   button {
@@ -272,7 +274,7 @@ button {
 .main_subtitle {
   margin-top: 0;
   margin-bottom: 25px;
-  width: 280px;
+  max-width: 280px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -318,7 +320,10 @@ color: #000000;
    font-family: OpenSans-Regular, sans-serif;
    font-size: 15px;
    max-width: 280px;
-   margin: 0 auto;
+   margin-top: 0;
+   margin-bottom: 0;
+   margin-left: auto;
+   margin-right: auto;
    color: #000000;
  }
 
@@ -347,8 +352,7 @@ color: #000000;
   .main_article_blabla_01,
   .main_article_blabla_02,
   .main_article_blabla_03 {
-    padding: 40px 20px 40px 20px;
-    padding-left: 260px;
+    padding: 40px 20px 40px 260px;
   }
 
   .main_article_blabla_01 {
@@ -361,7 +365,7 @@ color: #000000;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-    width: 445px;
+    max-width: 445px;
   }
 
   .main_subtitle::after {
@@ -386,7 +390,8 @@ color: #000000;
    }
 }
 
-@media (min-width: 961px) and (max-width: 1920px) {
+@media (min-width: 961px) and (max-width: 1920px),
+(min-width: 1920px) {
   .main_title {
     max-width: 700px;
     margin-top: 100px;
@@ -395,7 +400,7 @@ color: #000000;
     padding-left: 250px;
   }
 
-  .main_article_athlets .main_article_section_title {
+  .main_article_section_title {
     width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -412,29 +417,30 @@ color: #000000;
 
   .main_article_athlets .main_article_section_img {
     position: absolute;
-    left: -180px;
+    left: -350px;
     top: -40px;
+    z-index: 5;
   }
 
   .main_article_blabla_01,
   .main_article_blabla_02,
   .main_article_blabla_03 {
     padding: 0;
-
+    margin: 0;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
   }
 
   .main_article_blabla_01 {
     background-color: #ffffff;
-    padding-top: 0;
   }
 
   .main_subtitle {
-    padding-top: 50px;
-    padding-left: 550px;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 445px;
+    position: absolute;
+    left: 53%;
+    top: 55px;
+    max-width: 400px;
   }
 
   .main_subtitle::after {
@@ -454,9 +460,12 @@ color: #000000;
   .main_article_blabla_text_01,
   .main_article_blabla_text_02,
   .main_article_blabla_text_03 {
-     font-size: 16px;
      max-width: 700px;
-     padding: 20px 20px 55px 630px;
+     font-size: 20px;
+     position: absolute;
+     left: 53%;
+     top: 120px;
+     padding-right: 20px;
   }
 }
 
@@ -473,7 +482,7 @@ color: #000000;
 }
 
 @media (min-width: 641px) and (max-width: 960px) { /* здвигаем баскетболиста в право*/
-  .main_article_players {
+   .main_article_players {
     position: relative;
   }
 
@@ -491,6 +500,82 @@ color: #000000;
     padding-left: 0;
   }
 }
+
+@media (min-width: 961px) and (max-width: 1920px),
+ (min-width: 1920px) {
+    .main {
+    overflow: hidden;
+  }
+
+  .main_article_players {
+    position: relative;
+  }
+
+  .main_article_players .main_article_section_img {
+    position: absolute;
+    left: 40%;
+    top: -40px;
+    z-index: 5;
+  }
+.main_article_players .main_article_section_title {
+  width: auto;
+}
+
+  .main_article_players .main_title {
+    width: 1550px;
+    max-width: 1550px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0 0 20px;
+   }
+
+   .main_article_players .main_article_blabla_01,
+   .main_article_players .main_article_blabla_02,
+   .main_article_players .main_article_blabla_03 {
+     padding: 60px 0 0 0;
+     box-sizing: border-box;
+     margin: 0;
+     height: 250px;
+     position: static;
+   }
+
+  .main_article_players .main_subtitle {
+     position: static;
+     left: 10%;
+     top: 55px;
+     width: 1550px;
+     max-width: 1550px;
+     margin-left: auto;
+     margin-right: auto;
+     padding: 0 0 0 20px;
+   }
+
+   .main_subtitle::after {
+     width: 21px;
+     height: 6px;
+     border-radius: 3px;
+   }
+
+   .main_article_blabla_subtitle_number {
+     font-size: 18px;
+   }
+
+   .main_article_blabla_subtitle_text {
+     font-size: 36px;
+   }
+
+   .main_article_players .main_article_blabla_text_01,
+    .main_article_players .main_article_blabla_text_02,
+    .main_article_players .main_article_blabla_text_03 {
+      position: static;
+      width: 760px;
+      max-width: 1550px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 790px 0 20px;
+   }
+ }
+
 .main_no_name_text {                                /*no_name*/
   padding: 0 20px 0 20px;
 }
@@ -591,8 +676,84 @@ color: #000000;
     margin-bottom: 95px;
     font-size: 24px;
   }
-
 }
+
+@media (min-width: 961px) and (max-width: 1920px),
+ (min-width: 1920px) {
+   .main_no_name {
+     display: flex;
+     flex-wrap: wrap;
+    }
+    .main_no_name_imges {
+      width: 50%;
+    }
+
+    .main_no_name_text {
+      width: 50%;
+      box-sizing: border-box;
+      padding: 0 0 0 110px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .main_no_name4 {
+      order: 1;
+    }
+    .main_no_name3 {
+      order: 2;
+    }
+    .main_no_name5 {
+      order: 3;
+    }
+    .main_no_name6 {
+      order: 4;
+    }
+
+    .main_no_name_title {
+      max-width: 640px;
+      margin: 0 0 55px 0;
+    }
+
+    .main_no_name_number {
+        width: 165px;
+        height: 165px;
+        bottom: -30px;
+        left: -202px;
+      }
+
+    .main_no_name4 .main_no_name_number {
+        left: auto;
+        right: -174px;
+      }
+
+    .main_no_name_title_number {
+        font-size: 24px;
+      }
+
+    .main_no_name_title_number::after {
+        content: "";
+        width: 25px;
+        height: 5px;
+        border-radius: 3px;
+      }
+
+    .main_no_name_title_text {
+      font-size: 80px;
+    }
+
+    .main_no_name_blabla {
+      font-size: 24px;
+      max-width: 640px;
+      padding-right: 20px;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+}
+
+
+
 .footer {                                            /*footer*/
   padding: 100px 20px 10px;
   background-image: url("../images/game_767.jpg");
